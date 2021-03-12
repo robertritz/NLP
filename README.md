@@ -6,11 +6,14 @@ Collection of NLP projects, mostly relating to Mongolian. Datasets and model out
 ### Eduge Classification
 Folder: `01_eduge_classification`
 
-This is a classification task for the [Eduge](https://github.com/tugstugi/mongolian-nlp/blob/master/datasets/eduge.csv.gz) dataset of 70 thousand Mongolian online news articles with labeled news categories. This project uses Fast.ai. 
+This is a classification task for the [Eduge](https://github.com/tugstugi/mongolian-nlp/blob/master/datasets/eduge.csv.gz) dataset of 70 thousand Mongolian online news articles with labeled news categories. This project uses Fast.ai. A shortened process is used:
+
+1. Training language model on Eduge dataset
+2. Train classifier
 
 After training a language model using the Eduge dataset, a classifier accuracy of 93.5% is reached after 10 epochs. Training the classifier without the language model gives an accuracy of roughly 90.5% after 10 epochs.
 
-### ULMFiT Mongolian Language Model
+### ULMFiT Mongolian Language Model (In Progress)
 Folder: `02_mongolian_language_model`
 
 This is a project to create a general language model using the [ULMFiT](https://arxiv.org/abs/1801.06146) method proposed by the Fast.ai co-authors Jeremy Howard and Sebastian Ruder. This language model is primarily designed for text classification tasks in a three step process:

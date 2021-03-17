@@ -10,6 +10,13 @@ The benefits of ULMFiT (from my perspective):
 2. Affordable hardware can be used for all stages. 
 3. Fine-tuning and classification can take as little as an hour and doesn't require large amounts of labeled data.
 
+#### Libraries:
+Notebooks used the following versions:
+- Fast.ai version: 2.2.7
+- Fastcore version: 1.3.19
+- torchtext version: 0.8.0 (There was a dependency error with the fast.ai and fastcore versions above on Google Colab, so I installed torchtext 0.8.0)
+- sentencepiece version: 0.1.95
+
 #### Notebooks:
 - **01 - Large News Corpus Data Prep**: Loads all files from original dataset into a Pandas dataframe and randomly samples 20% of the dataset. Output is the data used to train the LM in notebook 02.
 - **02 - Large MGL News Language Model**: Trains the language model using a sentence piece tokenizer with the 20% sample from the large news corpus. Training took approximately 30 hours on a Quadro P4000. A perplexity of *32.7* is reached after 10 epochs. 
@@ -36,5 +43,7 @@ Result is a language model suitable for transfer learning on a variety of tasks.
 
 #### Notes
 Since I used a large news corpus and trained the language model on it instead of a more "general" dataset like a Wikipedia corpus, I didn't see an increase in my test case, Eduge classification, of 93.5% accuracy. It's also possible that this is the top end of the accuracy possibility without other augmentations or a different architecture.
+
+The sentence piece tokenizer (spt) is really really fast, and is definitely faster than the default tokenizer. It also seems that you can train a language model with the spt then fine tune with the default tokenizer. Although it would make sense to use the same tokenizer the whole way through. 
 
 I'll be using this pre-trained model for testing other classification tasks soon.

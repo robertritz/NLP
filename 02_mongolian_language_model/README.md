@@ -41,7 +41,7 @@ Result is a language model suitable for transfer learning on a variety of tasks.
 [Eduge classifer.](https://drive.google.com/file/d/1-0AovxFFmpvVT1LTw_j5awPQTgAtF6k4/view?usp=sharing) Can be used for classifying news stories with the Fast.ai library. 
 - `eduge_classifier.pkl`: Pickled model. 
 
-#### Notes
+#### Notes:
 Since I used a large news corpus and trained the language model on it instead of a more "general" dataset like a Wikipedia corpus, I didn't see an increase in my test case, Eduge classification, of 93.5% accuracy. It's also possible that this is the top end of the accuracy possibility without other augmentations or a different architecture.
 
 The sentence piece tokenizer (spt) is really really fast, and is definitely faster than the default tokenizer. It also seems that you can train a language model with the spt then fine tune with the default tokenizer. Although it would make sense to use the same tokenizer the whole way through. 

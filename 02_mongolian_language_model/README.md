@@ -1,14 +1,15 @@
 # ULMFiT Language Model for Mongolian
-
-The paper outlines a three step process to achieve excellent results:
+This project generates a language model suitable for fine-tuning and training a classifier. The ULMFiT method proposed by the Fast.ai co-authors Jeremy Howard and Sebastian Ruder is used ([paper](https://arxiv.org/abs/1801.06146)). This method has three steps:
 1. General Language Model - Pre-train a language model using a relatively large general corpus.
 2. Language Model Fine Tuning - Perform transfer learning on the general language model using your problem specific dataset.
 3. Classifier Training - Using the fine tuned language model train a text classifier. Excellent results can be found with only 100 training examples.
 
+You can used the linked model and vocabulary below to fine-tine on your own data and then build a text classifier.
+
 The benefits of ULMFiT (from my perspective):
-1. The pre-trained language model is not prohibitively expensive to train and does not require massive amounts of data.
+1. The pre-trained language model is not prohibitively expensive to train and does not require massive amounts of data. State of the art results can be achieved with a corpus of 100 million words.
 2. Affordable hardware can be used for all stages. 
-3. Fine-tuning and classification can take as little as an hour and doesn't require large amounts of labeled data.
+3. Fine-tuning and classification can take as little as an hour (or even minutes) and doesn't require large amounts of labeled data. The authors found great results with as few as 100 labeled examples. 
 
 #### Libraries:
 Notebooks used the following versions:

@@ -16,7 +16,7 @@ After training a language model using the Eduge dataset, a classifier accuracy o
 ### ULMFiT Mongolian Language Model
 Folder: `02_mongolian_language_model`
 
-This is a project to create a general language model using the [ULMFiT](https://arxiv.org/abs/1801.06146) method proposed by the Fast.ai co-authors Jeremy Howard and Sebastian Ruder. See the folder for more details and link to the completed model.
+This is a project to create a general language model using the [ULMFiT](https://arxiv.org/abs/1801.06146) method proposed by the Fast.ai co-authors Jeremy Howard and Sebastian Ruder. **See the folder for more details and link to the completed model.**
 
 Result is a general language model that can be used for transfer learning on a variety of tasks. Notebook show the complete three stage process:
 1. Pre-training language model
